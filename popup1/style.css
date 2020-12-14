@@ -3,23 +3,59 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 300px;
+  margin-top: 300px;
 }
 
 #layer1,
 #layer2 {
-  display: block;
+  display: none;
+}
+
+
+.pop-layer,
+.emphasis-layer {
+  display: flex;
   position: absolute;
+  border: 3px solid #3572b5;
+  border-radius: 10px;
   left: 50%;
-  top: 0%;
+  top: 15%;
+  padding: 15px;
+  transform: translate(-50%, -50%);
 }
 
-pop-btn {
-
+.emphasis-layer {
+  top: 50%;
+  left: 50%;
 }
 
-pop-container {
+.bg {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* https://webclub.tistory.com/536 */
-/* https://webclub.tistory.com/189 */
+.disappear {
+  display: none;
+}
+
+.ctxt {
+  font-size: 20px;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.14);
+  outline: none;
+}
+
+.showPrint {
+  display: block;
+}
