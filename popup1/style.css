@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 300px;
+}
+
+#layer1,
+#layer2 {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+}
+
+pop-btn {
+
+}
+
+pop-container {
+}
+
+/* https://webclub.tistory.com/536 */
+/* https://webclub.tistory.com/189 */
