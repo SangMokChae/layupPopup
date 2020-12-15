@@ -1,21 +1,23 @@
-const popBtn = document.querySelector(".focus_btn");
-const layer2 = document.getElementById("layer2");
-const closeForm = document.querySelector(".focus_close_btn");
-const closeBtn = closeForm.querySelector(".btn");
+const body = document.querySelector("body"),
+  focusBtn = document.querySelector(".focus_btn"),
+  layer2 = document.getElementById("layer2"),
+  fBtnForm = document.querySelector(".fBtnForm"),
+  fBtn = fBtnForm.querySelector(".fBtn");
 
-function handleOpenText() {
+function handleOpenFxt() {
   layer2.classList.remove("disappear");
   layer2.classList.add("showPrint");
+  body.classList.add("bg");
 }
 
-function hanldeCloseText() {
+function hanldeCloseFxt() {
+  body.classList.remove("bg");
   layer2.classList.remove("showPrint");
   layer2.classList.add("disappear");
 }
 
 function init() {
-  popBtn.addEventListener("click", handleOpenText);
-  closeBtn.addEventListener("click", hanldeCloseText);
+  focusBtn.addEventListener("click", handleOpenFxt);
+  fBtn.addEventListener("click", hanldeCloseFxt);
 }
-
 init();

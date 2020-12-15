@@ -1,7 +1,7 @@
-const popBtn = document.querySelector(".pop-btn");
-const layer1 = document.getElementById("layer1");
-const closeForm = document.querySelector(".close-btn");
-const closeBtn = closeForm.querySelector(".btn");
+const popBtn = document.querySelector(".pop-btn"),
+  layer1 = document.getElementById("layer1"),
+  closeForm = document.querySelector(".close-btn"),
+  closeBtn = closeForm.querySelector(".btn");
 
 function handleOpenText() {
   layer1.classList.remove("disappear");
