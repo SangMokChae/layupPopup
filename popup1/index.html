@@ -8,7 +8,7 @@
 </head>
 <body>
   <a href="#layer1" class="pop-btn">일반 팝업레이어</a>
-  <div id="layer1" class="pop-layer">
+  <div id="layer1" class="pop-layer disappear">
     <div class="pop-container">
       <div class="in_contants">
         <p class="ctxt">I started Coding!<br />
@@ -21,19 +21,22 @@
       </div>
     </div>
   </div>
-  <a href="#layer2" class="pop-btn">강조 팝업레이어</a>
-  <div id="layer2" class="emphasis-layer">
+  <a href="#layer2" class="focus_btn">강조 팝업레이어</a>
+  <div id="layer2" class="emphasis-layer disappear">
     <div class="pop-container">
       <div class="in_contants">
         <p class="ctxt">I started Coding!<br />
           It's so hard and difficult to me!<br />
           i felt it isn't easy! but sometime<br />
           i felt coding is funny so i can't give up!</p>
-          <form class="close-btn">
+          <form class="focus_close_btn">
             <input type="button" value="Close" class="btn">
           </form>
       </div>
     </div>
   </div>
+
+  <script src="layerPopup.js"></script>
+  <script src="focusPopup.js"></script>
 </body>
 </html>

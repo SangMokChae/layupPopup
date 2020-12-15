@@ -6,11 +6,11 @@ body {
   margin-top: 300px;
 }
 
-#layer1,
-#layer2 {
-  display: none;
+.pop-btn,
+.focus_btn {
+  text-decoration: none;
+  color: red;
 }
-
 
 .pop-layer,
 .emphasis-layer {
@@ -19,9 +19,10 @@ body {
   border: 3px solid #3572b5;
   border-radius: 10px;
   left: 50%;
-  top: 15%;
+  top: 18%;
   padding: 15px;
   transform: translate(-50%, -50%);
+  background-color: white;
 }
 
 .emphasis-layer {
@@ -35,10 +36,14 @@ body {
 
 .disappear {
   display: none;
+  opacity: 0;
 }
 
 .ctxt {
   font-size: 20px;
+  padding: 20px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .close-btn {
@@ -56,6 +61,22 @@ body {
   outline: none;
 }
 
+
+.close-btn .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+@keyframes faidIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .showPrint {
   display: block;
+  animation: faidIn 1s linear;
 }
