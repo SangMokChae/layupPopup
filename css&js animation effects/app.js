@@ -2,8 +2,12 @@ const banner = document.getElementsByClassName('banner')[0];
 const blocks = document.getElementsByClassName('blocks');
 const section = document.querySelector('section');
 
+const IMG_NUM = 6;
+//todo
+// https://stackoverflow.com/questions/15231812/random-background-images-css3
+
 function init() {
-  for(let i = 1; i < 400; i++) {
+  for(let i = 1; i < 500; i++) {
     banner.innerHTML += "<div class='blocks'></div>";
     const duration = Math.random() * 5;
     blocks[i].style.animationDuration = 2 + duration + 's';
