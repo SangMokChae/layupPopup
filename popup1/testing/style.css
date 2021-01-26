@@ -1,0 +1,792 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+@media (max-width: 768px) {
+  .container .home,
+  .container .services {
+    border-bottom: 1px solid #000;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr repeat(auto-fill, 1fr);
+  }
+  .container > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container > :nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .container > :nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .container > :nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .container .main__posts {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    grid-auto-rows: 300px;
+    gap: 3px;
+    background-color: #000;
+  }
+  .container .sub__posts {
+    height: 300px;
+    border-top: 3px solid #000;
+    gap: 3px;
+    background-color: #000;
+  }
+  .container nav {
+    border-right: 3px solid #000;
+  }
+  .container .home,
+  .container .services,
+  .container nav {
+    border-bottom: 3px solid #000;
+  }
+}
+@media (min-width: 1025px) {
+  .container {
+    -ms-grid-columns: 1fr 1.2fr 2fr;
+    grid-template-columns: 1fr 1.2fr 2fr;
+    -ms-grid-rows: 4fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    border: 3px solid #000;
+  }
+  .container > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .container > :nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .container > :nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .container > :nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .container > :nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .container > :nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .container > :nth-of-type(2) {
+    order: 2;
+  }
+  .container > :nth-of-type(3) {
+    order: 1;
+  }
+  .container > :nth-of-type(4) {
+    order: 3;
+  }
+  .container .home {
+    border-bottom: 3px solid #000;
+  }
+  .container .home,
+  .container .services,
+  .container nav {
+    border-right: 3px solid #000;
+  }
+  .container .main__posts {
+    border-bottom: 3px solid #000;
+  }
+  .container .main__posts,
+  .container .sub__posts {
+    background-color: #000;
+    gap: 3px;
+  }
+}
+nav {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.home h4,
+.services h4,
+nav h4 {
+  text-transform: uppercase;
+  font-size: 1.5vmin;
+}
+@media (max-width: 768px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.5fr;
+    grid-template-rows: 1fr 1.5fr;
+  }
+  nav > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  nav > :nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  nav .nav-top {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  nav .nav-top .site-description {
+    display: inline-block;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 4vmin;
+  }
+  nav .menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 3vmin;
+  }
+  nav .menu__container .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+  }
+  nav .menu__container .menu-item:first-child {
+    border-top: 1px solid #000;
+  }
+  nav .menu__container .menu-item:hover {
+    background-color: #eee;
+  }
+  nav footer {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.5fr;
+    grid-template-rows: 1fr 1.5fr;
+  }
+  nav > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  nav > :nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  nav .nav-top {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  nav .nav-top .site-description {
+    display: inline-block;
+    margin-top: 80px;
+    font-size: 2.5vmin;
+  }
+  nav .menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5vmin;
+  }
+  nav .menu__container .menu-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+  }
+  nav .menu__container .menu-item:first-child {
+    border-top: 1px solid #000;
+  }
+  nav .menu__container .menu-item:hover {
+    background-color: #eee;
+  }
+  nav footer {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+@media (min-width: 1025px) {
+  nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 20px 1.5fr 20px 1.3fr;
+    grid-template-rows: 1fr 1.5fr 1.3fr;
+    gap: 20px;
+  }
+  nav > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  nav > :nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  nav > :nth-child(3) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  nav .nav-top {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  nav .nav-top .site-description {
+    display: inline-block;
+    margin-top: 80px;
+    font-size: 4.5vmin;
+  }
+  nav .menu__container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vmin;
+  }
+  nav .menu__container .menu-item {
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #000;
+  }
+  nav .menu__container .menu-item:first-child {
+    border-top: 1px solid #000;
+  }
+  nav .menu__container .menu-item:hover {
+    background-color: #eee;
+  }
+  nav footer {
+    justify-content: space-between;
+    font-size: 1.5vmin;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  nav footer,
+  nav footer .contact__address {
+    display: flex;
+    flex-direction: column;
+  }
+  nav footer .contact__address:nth-child(n + 2) > :first-child {
+    font-weight: 700;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    padding: 20px;
+  }
+  .home .home-title {
+    font-size: 3vmin;
+    margin-top: 80px;
+  }
+  .home .home-content {
+    font-size: 1.5vmin;
+  }
+  .home .home-content span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home {
+    padding: 20px;
+  }
+  .home .home-title {
+    font-size: 3vmin;
+    margin-top: 80px;
+  }
+  .home .home-content {
+    font-size: 1.5vmin;
+  }
+  .home .home-content span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .home {
+    padding: 20px;
+  }
+  .home .home-title {
+    font-size: 5vmin;
+    margin-top: 80px;
+  }
+  .home .home-content {
+    font-size: 1.5vmin;
+  }
+  .home .home-content span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .services .service-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 4vmin;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .services .service-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 4vmin;
+  }
+}
+@media (min-width: 1025px) {
+  .services {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .services .service-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 4vmin;
+  }
+}
+@media (max-width: 768px) {
+  .main__posts .post-1,
+  .main__posts .post-2,
+  .main__posts .post-3 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/11/A1-Actron-Air-206.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-2,
+  .main__posts .post-3 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/linkedin-and-fb.jpg);
+  }
+  .main__posts .post-3 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/Screen-Shot-2020-10-13-at-11.08.14-am.png);
+  }
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/09/A1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/A1-Dana-Home-Office-webb.jpg);
+  }
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-055-scaled-e1595914534385.jpg);
+  }
+  .main__posts .post-1,
+  .main__posts .post-2,
+  .main__posts .post-3,
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main__posts .post-1,
+  .main__posts .post-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/11/A1-Actron-Air-206.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-2 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/linkedin-and-fb.jpg);
+  }
+  .main__posts .post-3,
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/Screen-Shot-2020-10-13-at-11.08.14-am.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/09/A1.jpg);
+  }
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/A1-Dana-Home-Office-webb.jpg);
+  }
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-055-scaled-e1595914534385.jpg);
+  }
+}
+@media (min-width: 1025px) {
+  .main__posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [6];
+    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: (1fr) [4];
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .main__posts > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .main__posts > :nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .main__posts > :nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .main__posts > :nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .main__posts > :nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .main__posts > :nth-child(6) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+  }
+  .main__posts > :nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .main__posts > :nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .main__posts > :nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .main__posts > :nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .main__posts > :nth-child(11) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .main__posts > :nth-child(12) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 6;
+  }
+  .main__posts > :nth-child(13) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .main__posts > :nth-child(14) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .main__posts > :nth-child(15) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .main__posts > :nth-child(16) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 4;
+  }
+  .main__posts > :nth-child(17) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .main__posts > :nth-child(18) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 6;
+  }
+  .main__posts > :nth-child(19) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+  .main__posts > :nth-child(20) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+  .main__posts > :nth-child(21) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+  }
+  .main__posts > :nth-child(22) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4;
+  }
+  .main__posts > :nth-child(23) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;
+  }
+  .main__posts > :nth-child(24) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 6;
+  }
+  .main__posts .post-1,
+  .main__posts .post-2 {
+    -ms-grid-column-span: 3;
+    grid-column: span 3;
+    -ms-grid-row-span: 4;
+    grid-row: span 4;
+  }
+  .main__posts .post-2 {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+  }
+  .main__posts .post-3,
+  .main__posts .post-6 {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+  .main__posts .post-1,
+  .main__posts .post-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/11/A1-Actron-Air-206.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-2 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/linkedin-and-fb.jpg);
+  }
+  .main__posts .post-3,
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/10/Screen-Shot-2020-10-13-at-11.08.14-am.png);
+    background-position: center;
+    background-size: cover;
+  }
+  .main__posts .post-4,
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/09/A1.jpg);
+  }
+  .main__posts .post-5,
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/A1-Dana-Home-Office-webb.jpg);
+  }
+  .main__posts .post-6 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-055-scaled-e1595914534385.jpg);
+  }
+}
+@media (max-width: 768px) {
+  .sub__posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 300px;
+  }
+  .sub__posts > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .sub__posts > :nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .sub__posts > :nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .sub__posts > :nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .sub__posts .post-1,
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-084-resized-.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/Pantone-color-pic.jpg);
+  }
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/A1-Marble-005.jpg);
+  }
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/blogggg-heads-.jpg);
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sub__posts {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .sub__posts .post-1,
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-084-resized-.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/Pantone-color-pic.jpg);
+  }
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/A1-Marble-005.jpg);
+  }
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/blogggg-heads-.jpg);
+  }
+}
+@media (min-width: 1025px) {
+  .sub__posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [6];
+    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .sub__posts > :nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .sub__posts > :nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .sub__posts > :nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .sub__posts > :nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+  .sub__posts > :nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .sub__posts > :nth-child(6) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+  }
+  .sub__posts > :nth-child(7) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .sub__posts > :nth-child(8) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .sub__posts > :nth-child(9) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .sub__posts > :nth-child(10) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+  }
+  .sub__posts > :nth-child(11) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+  }
+  .sub__posts > :nth-child(12) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 6;
+  }
+  .sub__posts .post-1,
+  .sub__posts .post-3 {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+  }
+  .sub__posts .post-3 {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+  .sub__posts .post-1,
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/07/A1-Noma-Finals-084-resized-.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .sub__posts .post-2,
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/Pantone-color-pic.jpg);
+  }
+  .sub__posts .post-3,
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2019/01/A1-Marble-005.jpg);
+  }
+  .sub__posts .post-4 {
+    background-image: url(https://a1office.com.au/wp-content/uploads/2020/06/blogggg-heads-.jpg);
+  }
+}
