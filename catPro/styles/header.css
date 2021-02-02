@@ -1,0 +1,38 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-top {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(96, 214, 243, 0.822);
+  box-shadow: 0 2px 1px rgba(179, 213, 221, 0.822);
+  border-radius: 50px;
+  height: 45px;
+}
+
+.header-top a {
+  text-decoration: none;
+  margin: 2%;
+  font-size: 18px;
+  color: black;
+  font-weight: 800;
+}
+
+.header-top a:hover {
+  color: rgb(240, 48, 80);
+  transform: scaleY(1.3);
+}
+
+.cat-header-top__pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  z-index: -5;
+}

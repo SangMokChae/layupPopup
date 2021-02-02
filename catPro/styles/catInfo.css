@@ -1,0 +1,70 @@
+#catInfo-main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  width: auto;
+}
+
+.cat-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.legend {
+  border: 8px solid rgb(90, 109, 221);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.legend > span {
+  border: 5px dotted white;
+  font-weight: 600;
+}
+
+.catInfo-sub {
+  margin: 15px;
+  height: 40px;
+  border-radius: 30px;
+  border: 2.5px solid plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(141, 235, 141, 0.76);
+}
+
+.name,
+.mail {
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.file {
+  border: 1px solid white;
+  width: 73.5px;
+}
+
+.name::placeholder,
+.mail::placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+.catInfo-sub:focus {
+  outline: none;
+}
+
+.detail-subtitle {
+  border: 2.5px solid plum;
+  background-color: rgba(141, 235, 141, 0.76);
+}
+
+.detail-subtitle:focus {
+  width: 500px;
+  height: 320px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px;
+}

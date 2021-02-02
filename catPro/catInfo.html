@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>고양이 자랑 시간</title>
+</head>
+<body>
+  <div class="color-bg">
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+  </div>
+
+  <header id="header">
+    <div class="header-top">
+      <a href="#" class="header-list">사이트소개</a>
+      <a href="/index.html" class="header-list">고양이 분양</a>
+      <a href="#" class="header-list">고객센터</a>
+      <a href="/catInfo.html" class="header-list">고양이 자랑</a>
+    </div>
+    <img src="/img/4.jpg" alt="cat-header" id="bgPhoto" class="cat-header-top__pic">
+  </header>
+
+  <main id="catInfo-main">
+    <legend class="legend">
+      <span>고양이 자랑</span>
+      <form class="cat-form">
+        <input type="text" placeholder="고양이 이름을 지어주세요" class="name catInfo-sub">
+        <select name="addr" class="addr catInfo-sub">
+          <option value="seoul">서울</option>
+          <option value="busan">부산</option>
+          <option value="deagu">대구</option>
+          <option value="gwangju">광주</option>
+          <option value="incheon">인천</option>
+        </select>
+        <div class="gender-form catInfo-sub">
+          <input type="radio" name="gender" class="gender"><span></span>수컷</span>
+          <input type="radio" name="gender" class="gender"><span></span>암컷</span>
+        </div>
+        <select name="fav" class="fav catInfo-sub">
+          <option value="fish">생선</option>
+        <option value="cheese">치즈</option>
+        <option value="chur">츄르</option>
+        <option value="can">통조림</option>
+        <option value="dk">???</option>
+      </select>
+      <div class="file-form catInfo-sub">
+        <input type="file" class="file">
+      </div>
+      <input type="mail" class="mail catInfo-sub" placeholder="mail을 적어 주세요">
+      <textarea class="detail-subtitle catInfo-subtitle" cols="60" rows="10" placeholder="상세설명"></textarea>
+    </form>
+  </legend>
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 고양이 주식회사</p>
+  </footer>
+</body>
+</html>

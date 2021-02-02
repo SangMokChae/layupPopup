@@ -1,0 +1,117 @@
+@import "reset.css";
+/* layout */
+@import "/styles/bgForm.css";
+@import "/styles/header.css";
+@import "/styles/footer.css";
+/* 다른 page */
+@import "/styles/catInfo.css";
+
+body {
+  width: auto;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 메인 */
+.cat-main {
+  margin-top: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-main__pic {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+
+.cat-info {
+  margin: 10px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em black;
+  background: linear-gradient(45deg, #ffbc00, #ff0056);
+  box-shadow: 1px 2px 5px black;
+}
+
+.cat-info:nth-child(2) {
+  background: linear-gradient(315deg, #03a9f4, #ff0056);
+}
+
+.cat-info:last-child {
+  background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.cat-subtitle__info li {
+  margin: 15px;
+}
+
+.cat-subtitle__info li {
+  line-height: 30px;
+}
+
+@supports (display: flex) {
+  @media screen and (min-width: 0, max-width: 500px) {
+    .cat-header-top__pic {
+      width: 100%;
+    }
+
+    .header-top {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .cat-main__pic,
+    .cat-subtitle__info {
+      width: 250px;
+      height: 250px;
+    }
+
+    .cat-main {
+      display: inline-block;
+      margin: 280px 0 20% 20%;
+    }
+
+    #footer {
+      width: 100%;
+    }
+  }
+}
+
+@supports (display: flex) {
+  @media screen and (max-width: 780px) {
+    .cat-header-top__pic {
+      width: 100%;
+    }
+
+    .header-top {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .cat-main__pic,
+    .cat-subtitle__info {
+      width: 250px;
+      height: 250px;
+    }
+
+    .cat-main {
+      flex-wrap: wrap; /*화면 넘어가는거 처리해줌*/
+      margin: 280px 0 20% 0;
+    }
+
+    .cat-info {
+      box-sizing: border-box;
+    }
+
+    #footer {
+      width: 100%;
+    }
+  }
+}
