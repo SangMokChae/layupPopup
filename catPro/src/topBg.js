@@ -7,7 +7,7 @@ bgArray[3] = "7.jpg";
 function showImg() {
   let imgNum = Math.round(Math.random()*3);
   let objImg = document.querySelector("#bgPhoto");
-  objImg.src=`/img/${bgArray[imgNum]}`;
+  objImg.src=`img/${bgArray[imgNum]}`;
 }
 
 function init() {

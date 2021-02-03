@@ -1,10 +1,10 @@
 @import "reset.css";
 /* layout */
-@import "/styles/bgForm.css";
-@import "/styles/header.css";
-@import "/styles/footer.css";
+@import "styles/bgForm.css";
+@import "styles/header.css";
+@import "styles/footer.css";
 /* 다른 page */
-@import "/styles/catInfo.css";
+@import "styles/catInfo.css";
 
 body {
   width: auto;
